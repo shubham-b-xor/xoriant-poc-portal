@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "poc1",
+    "name": "AI Chatbot",
+    "logoUrl": "/logos/chatbot.png",
+    "description": "Customer service AI chatbot demo.",
+    "status": "Active",
+    "url": "https://chatbot.example.com",
+    "contributors": [
+      {
+        "name": "John Doe",
+        "designation": "Developer",
+        "email": "john@example.com"
+      },
+      {
+        "name": "Alice Smith",
+        "designation": "Product Manager",
+        "email": "alice@example.com"
+      }
+    ]
+  },
+  {
+    "_id": "poc2",
+    "name": "Data Visualizer",
+    "logoUrl": "/logos/visualizer.png",
+    "description": "A D3.js based visualization tool.",
+    "status": "Completed",
+    "url": "https://datavis.example.com",
+    "contributors": [
+      {
+        "name": "Jane Roe",
+        "designation": "Designer",
+        "email": "jane@example.com"
+      }
+    ]
+  }
+]

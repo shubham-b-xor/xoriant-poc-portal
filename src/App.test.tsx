@@ -1,9 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import Dashboard from './pages/Dashboard';
+import POCModal from './components/POCModal';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+function App() {
+  return (
+    <>
+      <Dashboard />
+      <POCModal />
+    </>
+  );
+}
+
+export default App;
