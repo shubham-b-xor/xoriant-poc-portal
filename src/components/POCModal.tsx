@@ -39,6 +39,7 @@ const POCModal: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const poc = useSelector((state: RootState) => state.pocs.selectedPOC);
     console.log('Selected POC in modal:', poc);
+    // if (!poc) return null;
     const [comments, setComments] = useState<Record<string, any[]>>({});
 
     const [showForm, setShowForm] = useState(false);
@@ -48,6 +49,8 @@ const POCModal: React.FC = () => {
         email: '',
         comment: '',
     });
+
+    console.log('Selected POC in modal:', poc);
 
     const handleClose = () => dispatch(closePOCModal());
 

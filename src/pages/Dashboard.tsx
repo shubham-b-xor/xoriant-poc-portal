@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
     const { list, filter, search } = useSelector((state: RootState) => state.pocs);
 
     // Filter and search logic
-    const filteredPOCs = list.filter((poc: any) => {
+    const filteredPOCs = list.filter((poc) => {
         const matchesFilter = filter === 'all' || poc.status === filter;
         const matchesSearch = poc.name.toLowerCase().includes(search.toLowerCase());
         return matchesFilter && matchesSearch;
@@ -69,16 +69,12 @@ const Dashboard: React.FC = () => {
                 </Box>
 
                 <Grid container spacing={3}>
-                    {filteredPOCs.map((poc: any) => (
-                        <Grid
-                            onClick={() => dispatch(openPOCModal(poc))}
-                            sx={{ cursor: 'pointer' }}
-                        >
+                    {filteredPOCs.map((poc) => (
+                        <Grid sx={{ cursor: 'pointer' }} key={poc._id}>
                             <POCCard
                                 poc={poc}
                                 onClick={() => {
-                                    console.log('Card clicked:', poc.name);
-                                    console.log('Card clicked:', poc    );
+                                    console.log('card clicked: ', poc)
                                     dispatch(openPOCModal(poc));
                                 }}
                             />

@@ -11,6 +11,6 @@ export interface POC {
   shortDescription: string;
   description: string;
   url: string;
-  status: 'Active' | 'Completed' | 'Planned';
+  status: string;
   contributors: Contributor[];
 }
