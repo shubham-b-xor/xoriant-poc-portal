@@ -17,8 +17,6 @@ import POCCard from '../components/POCCard';
 const Dashboard: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const { list, filter, search } = useSelector((state: RootState) => state.pocs);
-
-    // Filter and search logic
     const filteredPOCs = list.filter((poc) => {
         const matchesFilter = filter === 'all' || poc.status === filter;
         const matchesSearch = poc.name.toLowerCase().includes(search.toLowerCase());
@@ -27,16 +25,13 @@ const Dashboard: React.FC = () => {
 
     return (
         <>
-            <AppBar position="static" color="default" elevation={1}>
+            <AppBar position="static" color="transparent" elevation={1}>
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h6" color='#06ff58' component="div" sx={{ flexGrow: 1 }}>
                         Xoriant POC Portal
                     </Typography>
                 </Toolbar>
             </AppBar>
-            {/* <Button onClick={() => dispatch(openPOCModal(list[0]))}>
-                Open First POC Modal
-            </Button> */}
             <Box sx={{ p: 3, maxWidth: 1200, mx: 'auto' }}>
                 <Box
                     sx={{
@@ -61,6 +56,7 @@ const Dashboard: React.FC = () => {
                                 variant={filter === status ? 'contained' : 'outlined'}
                                 onClick={() => dispatch(setFilter(status))}
                                 sx={{ textTransform: 'none' }}
+                                color='success'
                             >
                                 {status.charAt(0).toUpperCase() + status.slice(1)}
                             </Button>

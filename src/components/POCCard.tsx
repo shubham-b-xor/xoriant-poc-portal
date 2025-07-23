@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActionArea, CardContent, CardMedia, Typography, Box } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Typography, Box, Button } from '@mui/material';
 import { POC } from '../types';
 
 interface POCCardProps {
@@ -31,7 +31,7 @@ const POCCard: React.FC<POCCardProps> = ({ poc, onClick }) => {
             height="140"
             image={poc.logoUrl}
             alt={`${poc.name} logo`}
-            sx={{ objectFit: 'contain', p: 2, backgroundColor: '#f9f9f9' }}
+            sx={{ objectFit: 'fill', p: 0, backgroundColor: '#f9f9f9' }}
           />
         )}
 
@@ -44,6 +44,20 @@ const POCCard: React.FC<POCCardProps> = ({ poc, onClick }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      {poc.url && (
+        <Box sx={{ p: 2, pt: 0 }}>
+          <Button
+            variant="contained"
+            color="primary"
+            fullWidth
+            href={poc.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit POC
+          </Button>
+        </Box>
+      )}
     </Card>
   );
 };

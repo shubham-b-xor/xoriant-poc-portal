@@ -2,11 +2,11 @@
   {
     "_id": "poc1",
     "name": "AI Chatbot",
-    "logoUrl": "/logos/chatbot.png",
+    "logoUrl": "https://magazine.alumni.ubc.ca/sites/default/files/styles/max_1300x1300/public/2023-09/AIart-1920x1080.jpg?itok=i4Yw51WT",
     "shortDescription": "lorem ipsum",
     "description": "Customer service AI chatbot demo.",
     "status": "Active",
-    "url": "https://chatbot.example.com",
+    "url": "poc.logoUrl",
     "contributors": [
       {
         "name": "John Doe",
@@ -23,11 +23,11 @@
   {
     "_id": "poc2",
     "name": "Data Visualizer",
-    "logoUrl": "/logos/visualizer.png",
+    "logoUrl": "https://magazine.alumni.ubc.ca/sites/default/files/styles/max_1300x1300/public/2023-09/AIart-1920x1080.jpg?itok=i4Yw51WT",
     "shortDescription": "lorem ipsum",
     "description": "A D3.js based visualization tool.",
     "status": "Completed",
-    "url": "https://datavis.example.com",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2JFyVMUGB2hCmAhFXOdCydqzgsCHd2BAzEA&s",
     "contributors": [
       {
         "name": "Jane Roe",
